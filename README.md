@@ -5,12 +5,12 @@ based on LineageOS
 
 Initialize the manifest
 ```
-repo init --partial-clone -b fifteen -u https://github.com/AndromedaROM/platform_manifest --git-lfs
+repo init -b fifteen -u https://github.com/AndromedaROM/platform_manifest --git-lfs
 ```
 
 Sync it up
 ```
-repo sync -c -j$(nproc)
+repo sync -c --no-clone-bundle --optimized-fetch --prune --force-sync -j$(nproc --all)
 ```
 
 ## Building
